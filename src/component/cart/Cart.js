@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useContext, useState } from 'react';
-import { useCart } from 'react-use-cart';
-import { IoBagCheckOutline, IoClose, IoBagHandle } from 'react-icons/io5';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useContext, useState } from "react";
+import { useCart } from "react-use-cart";
+import { IoBagCheckOutline, IoClose, IoBagHandle } from "react-icons/io5";
 
 //internal import
-import CartItem from '@component/cart/CartItem';
-import LoginModal from '@component/modal/LoginModal';
-import { UserContext } from '@context/UserContext';
-import { SidebarContext } from '@context/SidebarContext';
+import CartItem from "@component/cart/CartItem";
+import LoginModal from "@component/modal/LoginModal";
+import { UserContext } from "@context/UserContext";
+import { SidebarContext } from "@context/SidebarContext";
 
 const Cart = () => {
   const router = useRouter();
@@ -21,7 +21,7 @@ const Cart = () => {
   } = useContext(UserContext);
 
   // const handleOpenLogin = () => {
-  //   if (router.push('/?redirect=/checkout')) {
+  //   if (router.push("/?redirect=/checkout")) {
   //     toggleCartDrawer();
   //     setModalOpen(!modalOpen);
   //   }
@@ -88,21 +88,21 @@ const Cart = () => {
             <CartItem key={i + 1} item={item} />
           ))}
         </div>
-        <div className="mx-5 my-3">
+        {/* <div className="mx-5 my-3">
           {items.length <= 0 ? (
             checkoutClass
           ) : (
-            // <span>
-            //   {!userInfo ? (
-            //     <div onClick={handleOpenLogin}>{checkoutClass}</div>
-            //   ) : (
-            //     <Link href="/checkout">
-            //       <a>{checkoutClass}</a>
-            //     </Link>
-            //   )}
-            // </span>
+            <span>
+              {!userInfo ? (
+                <div onClick={handleOpenLogin}>{checkoutClass}</div>
+              ) : (
+                <Link href="/checkout">
+                  <a>{checkoutClass}</a>
+                </Link>
+              )}
+            </span>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );
