@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import PageHeader from '@component/header/PageHeader';
 
 const TermAndConditions = () => {

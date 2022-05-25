@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 //internal import
-import Common from "@component/login/Common";
-import MainModal from "@component/modal/MainModal";
+import Common from '@component/login/Common';
+import MainModal from '@component/modal/MainModal';
 
 const LoginModal = ({ modalOpen, setModalOpen }) => {
   return (

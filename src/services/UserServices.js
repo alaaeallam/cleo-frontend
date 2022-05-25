@@ -1,12 +1,12 @@
-import requests from "./httpServices";
+import requests from './httpServices';
 
 const UserServices = {
   userLogin(body) {
-    return requests.post("/user/login", body);
+    return requests.post('/user/login', body);
   },
 
   verifyEmailAddress(body) {
-    return requests.post("/user/verify-email", body);
+    return requests.post('/user/verify-email', body);
   },
 
   userRegister(token, body) {
@@ -14,19 +14,19 @@ const UserServices = {
   },
 
   signUpWithProvider(body) {
-    return requests.post("/user/signup", body);
+    return requests.post('/user/signup', body);
   },
 
   forgetPassword(body) {
-    return requests.put("/user/forget-password", body);
+    return requests.put('/user/forget-password', body);
   },
 
   resetPassword(body) {
-    return requests.put("/user/reset-password", body);
+    return requests.put('/user/reset-password', body);
   },
 
   changePassword(body) {
-    return requests.post("/user/change-password", body);
+    return requests.post('/user/change-password', body);
   },
 
   updateUser(id, body) {

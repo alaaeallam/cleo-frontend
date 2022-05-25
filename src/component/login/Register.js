@@ -1,9 +1,9 @@
-import { FiLock, FiMail, FiUser } from "react-icons/fi";
+import { FiLock, FiMail, FiUser } from 'react-icons/fi';
 
 //internal import
-import Error from "@component/form/Error";
-import InputArea from "@component/form/InputArea";
-import useLoginSubmit from "@hooks/useLoginSubmit";
+import Error from '@component/form/Error';
+import InputArea from '@component/form/InputArea';
+import useLoginSubmit from '@hooks/useLoginSubmit';
 
 const Register = ({ setShowResetPassword, setModalOpen }) => {
   const { handleSubmit, submitHandler, register, errors, loading } =

@@ -6,7 +6,7 @@ import { PDFDownloadLink } from '@react-pdf/renderer';
 import { IoCloudDownloadOutline, IoPrintOutline } from 'react-icons/io5';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import useAsync from '@hooks/useAsync';
 import Invoice from '@component/invoice/Invoice';
 import Loading from '@component/preloader/Loading';

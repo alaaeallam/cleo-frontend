@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-[type="radio"]:checked {
+[type='radio']:checked {
   background-image: none;
 }
 .StripeElement {
@@ -23,7 +23,7 @@ p:not(:last-of-type) {
 
 .coupon .info::after,
 .coupon .info::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 25px;
   height: 25px;
@@ -39,14 +39,13 @@ p:not(:last-of-type) {
   bottom: -10px;
   left: -11px;
 }
-.coupon-home .info::before,
-.coupon-home .info::after {
+.coupon-home .info::before, .coupon-home .info::after{
   background: #fafafa;
 }
-.coupon-home .info::before {
+.coupon-home .info::before{
   top: -35px;
 }
-.coupon-home .info::after {
+.coupon-home .info::after{
   bottom: -35px;
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -149,7 +148,7 @@ p:not(:last-of-type) {
 }
 .drawer-handle-icon:before,
 .drawer-handle-icon:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background: #333;
@@ -304,21 +303,20 @@ p:not(:last-of-type) {
   margin: auto;
   width: 100%;
   height: 1px;
-  content: " ";
+  content: ' ';
   background: linear-gradient(to right, #ffffff 0, #d6d6d6 50%, #ffffff 100%);
 }
 /* category slider */
-.category-slider .swiper-button-prev,
-.category-slider .swiper-button-next {
+.category-slider .swiper-button-prev, .category-slider .swiper-button-next{
   display: none;
 }
-.category-slider button {
+.category-slider button{
   width: 30px;
   height: 30px;
   line-height: 30px;
 }
-.category-slider button.prev,
-.category-slider button.next {
+.category-slider button.prev, .category-slider button.next{
+  
   text-align: center;
   background-color: #34d399;
   color: #ffffff;
@@ -328,19 +326,17 @@ p:not(:last-of-type) {
   top: 15%;
   border-radius: 3px;
 }
-.category-slider button.prev {
+.category-slider button.prev{
   left: -1px;
   right: auto;
 }
-.category-slider button.next {
+.category-slider button.next{
   right: -1px;
   left: auto;
 }
-.category-slider button.next:hover,
-.category-slider button.prev {
-  background-color: #10b981;
+.category-slider button.next:hover, .category-slider button.prev{
+  background-color:#10b981;
 }
-.category-slider button.prev svg,
-.category-slider button.next svg {
+.category-slider button.prev svg, .category-slider button.next svg{
   margin: 0 auto;
 }

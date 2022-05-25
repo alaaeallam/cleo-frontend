@@ -16,7 +16,7 @@ import {
 } from 'react-share';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import Tags from '@component/common/Tags';
 import Stock from '@component/common/Stock';
 import Price from '@component/common/Price';

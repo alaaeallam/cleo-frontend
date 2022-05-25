@@ -7,7 +7,7 @@ import { IoLockOpenOutline } from 'react-icons/io5';
 import { FiCheck, FiRefreshCw, FiShoppingCart, FiTruck } from 'react-icons/fi';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import useAsync from '@hooks/useAsync';
 import useFilter from '@hooks/useFilter';
 import { userSidebar } from '@utils/data';

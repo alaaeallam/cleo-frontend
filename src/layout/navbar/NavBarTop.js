@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { FiPhoneCall, FiUser } from "react-icons/fi";
+import React, { useContext, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FiPhoneCall, FiUser } from 'react-icons/fi';
 
 //internal import
-import LoginModal from "@component/modal/LoginModal";
-import { UserContext } from "@context/UserContext";
+import LoginModal from '@component/modal/LoginModal';
+import { UserContext } from '@context/UserContext';
 
 const NavBarTop = () => {
   const {
@@ -17,7 +17,7 @@ const NavBarTop = () => {
 
   const handleModal = () => {
     if (userInfo?.email) {
-      router.push("/user/dashboard");
+      router.push('/user/dashboard');
     } else {
       setModalOpen(!modalOpen);
     }
@@ -34,7 +34,7 @@ const NavBarTop = () => {
           <div className="text-gray-700 py-2 font-sans text-xs font-medium border-b flex justify-between items-center">
             <span className="flex items-center">
               <FiPhoneCall className="mr-2" />
-              We are available 24/7, Need help? Call Us:{" "}
+              We are available 24/7, Need help? Call Us:{' '}
               <a
                 href="tel:+012345609"
                 className="font-bold text-emerald-500 ml-1"

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import Label from '@component/form/Label';
 import Error from '@component/form/Error';
 import { contactData } from '@utils/data';

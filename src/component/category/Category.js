@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import Link from "next/link";
-import { IoClose } from "react-icons/io5";
-import { FiSend } from "react-icons/fi";
+import { useContext } from 'react';
+import Link from 'next/link';
+import { IoClose } from 'react-icons/io5';
+import { FiSend } from 'react-icons/fi';
 
 //internal import
-import { pages } from "@utils/data";
-import useAsync from "@hooks/useAsync";
-import Loading from "@component/preloader/Loading";
-import { SidebarContext } from "@context/SidebarContext";
-import CategoryServices from "@services/CategoryServices";
-import CategoryCard from "@component/category/CategoryCard";
+import { pages } from '@utils/data';
+import useAsync from '@hooks/useAsync';
+import Loading from '@component/preloader/Loading';
+import { SidebarContext } from '@context/SidebarContext';
+import CategoryServices from '@services/CategoryServices';
+import CategoryCard from '@component/category/CategoryCard';
 
 const Category = () => {
   const { categoryDrawerOpen, closeCategoryDrawer } =
@@ -25,9 +25,9 @@ const Category = () => {
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex align-center">
             <Link href="/">
               <a className="mr-10">
-                <div className="flex">
-                  <FiSend className="text-3xl" />
-                  <h6 className="ml-2 text-2xl">Daraz</h6>
+                <div className='flex'>
+                  <FiSend className='text-3xl' />
+                  <h6 className='ml-2 text-2xl'>Daraz</h6>
                 </div>
               </a>
             </Link>

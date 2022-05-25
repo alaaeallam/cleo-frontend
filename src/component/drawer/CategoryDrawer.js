@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import dynamic from "next/dynamic";
-import Drawer from "rc-drawer";
+import React, { useContext } from 'react';
+import dynamic from 'next/dynamic';
+import Drawer from 'rc-drawer';
 
-import Category from "@component/category/Category";
-import { SidebarContext } from "@context/SidebarContext";
+import Category from '@component/category/Category';
+import { SidebarContext } from '@context/SidebarContext';
 
 const CategoryDrawer = () => {
   const { categoryDrawerOpen, closeCategoryDrawer } =
@@ -15,7 +15,7 @@ const CategoryDrawer = () => {
       onClose={closeCategoryDrawer}
       parent={null}
       level={null}
-      placement={"left"}
+      placement={'left'}
     >
       <Category />
     </Drawer>

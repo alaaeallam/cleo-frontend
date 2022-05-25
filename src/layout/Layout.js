@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { ToastContainer } from "react-toastify";
+import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
 
 //internal import
-import Navbar from "src/layout/navbar/Navbar";
-import Footer from "src/layout/footer/Footer";
-import FooterTop from "src/layout/footer/FooterTop";
-import MobileFooter from "src/layout/footer/MobileFooter";
-import FeatureCard from "@component/feature-card/FeatureCard";
-import NavBarTop from "./navbar/NavBarTop";
+import Navbar from 'src/layout/navbar/Navbar';
+import Footer from 'src/layout/footer/Footer';
+import FooterTop from 'src/layout/footer/FooterTop';
+import MobileFooter from 'src/layout/footer/MobileFooter';
+import FeatureCard from '@component/feature-card/FeatureCard';
+import NavBarTop from './navbar/NavBarTop';
 
 const Layout = ({ title, description, children }) => {
   return (
@@ -18,7 +18,7 @@ const Layout = ({ title, description, children }) => {
           <title>
             {title
               ? `Daraz | ${title}`
-              : "Daraz - React Grocery & Organic Food Store e-commerce Template"}
+              : 'Daraz - React Grocery & Organic Food Store e-commerce Template'}
           </title>
           {description && <meta name="description" content={description} />}
           <link ref="icon" href="/favicon.png" />

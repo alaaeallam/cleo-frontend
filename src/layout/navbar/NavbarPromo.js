@@ -1,24 +1,25 @@
-import { Fragment } from "react";
-import Link from "next/link";
-import { Transition, Popover } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/outline";
-//import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Fragment } from 'react';
+import Link from 'next/link';
+import { Transition, Popover } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/outline';
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from "next-i18next";
 
 //internal import
-import { pages } from "@utils/data";
-import Category from "@component/category/Category";
+import { pages } from '@utils/data';
+import Category from '@component/category/Category';
 
 // export const getStaticProps = async ({ locale }) => {
 //   return {
 //     props: {
-//       ...(await serverSideTranslations(locale, ["navbarpromo"])),
+//       ...(await serverSideTranslations(locale, ['navbarpromo']))
 //     },
 //   };
 // };
 
 const NavbarPromo = () => {
-  const { t } = useTranslation("navbarpromo");
+
+  const { t } = useTranslation('navbarpromo')
 
   return (
     <>
@@ -35,7 +36,7 @@ const NavbarPromo = () => {
                     <Popover className="relative font-serif">
                       <Popover.Button className="group inline-flex items-center py-2 hover:text-emerald-600 focus:outline-none">
                         <span className="font-serif text-sm font-medium">
-                          {t("cat")}
+                          {t('cat')}
                         </span>
                         <ChevronDownIcon
                           className="ml-1 h-3 w-3 group-hover:text-emerald-600"
@@ -62,18 +63,18 @@ const NavbarPromo = () => {
 
                     <Link href="/about-us">
                       <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600">
-                        {t("about")}
+                        {t('about')}
                       </a>
                     </Link>
                     <Link href="/contact-us">
                       <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600">
-                        {t("contact")}
+                        {t('contact')}
                       </a>
                     </Link>
 
                     <Popover className="relative font-serif">
                       <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium hover:text-emerald-600 focus:outline-none">
-                        <span>{t("page")}</span>
+                        <span>{t('page')}</span>
                         <ChevronDownIcon
                           className="ml-1 h-3 w-3 group-hover:text-emerald-600"
                           aria-hidden="true"
@@ -114,7 +115,7 @@ const NavbarPromo = () => {
                     </Popover>
                     <Link href="/offer">
                       <a className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600">
-                        {t("offer")}
+                        {t('offer')}
                         <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
                           <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -123,7 +124,7 @@ const NavbarPromo = () => {
                     </Link>
                     <Link href="/store">
                       <a className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600">
-                        {t("store")}
+                        {t('store')}
                         <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
                           <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -138,12 +139,12 @@ const NavbarPromo = () => {
           <div className="flex">
             <Link href="/privacy-policy">
               <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600">
-                {t("p-p")}
+                {t('p-p')}
               </a>
             </Link>
             <Link href="/terms-and-conditions">
               <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600">
-                {t("t-c")}
+                {t('t-c')}
               </a>
             </Link>
           </div>

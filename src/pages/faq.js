@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import PageHeader from '@component/header/PageHeader';
 
 const Faq = () => {

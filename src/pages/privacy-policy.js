@@ -1,7 +1,7 @@
 import React from 'react';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import PageHeader from '@component/header/PageHeader';
 
 const PrivacyPolicy = () => {

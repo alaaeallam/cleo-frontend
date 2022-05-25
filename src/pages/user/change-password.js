@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import Cookies from "js-cookie";
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import Cookies from 'js-cookie';
 
 //internal import
-import Error from "@component/form/Error";
-import Dashboard from "@pages/user/dashboard";
-import InputArea from "@component/form/InputArea";
+import Error from '@component/form/Error';
+import Dashboard from '@pages/user/dashboard';
+import InputArea from '@component/form/InputArea';
 // import UserServices from '@services/UserServices';
-import { notifyError, notifySuccess } from "@utils/toast";
+import { notifyError, notifySuccess } from '@utils/toast';
 
 const ChangePassword = () => {
   const {
@@ -18,7 +18,7 @@ const ChangePassword = () => {
   } = useForm();
 
   const onSubmit = ({ email, currentPassword, newPassword }) => {
-    notifySuccess("This feature is disable for demo!");
+    notifySuccess('This feature is disable for demo!');
     // UserServices.changePassword({ email, currentPassword, newPassword })
     //   .then((res) => {
     //     notifySuccess(res.message);
@@ -29,9 +29,9 @@ const ChangePassword = () => {
   };
 
   useEffect(() => {
-    if (Cookies.get("userInfo")) {
-      const user = JSON.parse(Cookies.get("userInfo"));
-      setValue("email", user.email);
+    if (Cookies.get('userInfo')) {
+      const user = JSON.parse(Cookies.get('userInfo'));
+      setValue('email', user.email);
     }
   });
 

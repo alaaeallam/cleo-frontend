@@ -1,27 +1,27 @@
-import { useContext, useEffect, useState } from "react";
-import Cookies from "js-cookie";
-import Link from "next/link";
-import Image from "next/image";
-import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
-import { useCart } from "react-use-cart";
-import { IoSearchOutline } from "react-icons/io5";
-import { FiShoppingCart, FiUser, FiBell, FiSend } from "react-icons/fi";
-import { Transition, Popover } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import { useContext, useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
+import Link from 'next/link';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+import { useCart } from 'react-use-cart';
+import { IoSearchOutline } from 'react-icons/io5';
+import { FiShoppingCart, FiUser, FiBell, FiSend } from 'react-icons/fi';
+import { Transition, Popover } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/outline';
 import { IoLanguageSharp } from "react-icons/io5";
 
 //internal import
-import NavbarPromo from "src/layout/navbar/NavbarPromo";
-import { UserContext } from "@context/UserContext";
-import LoginModal from "@component/modal/LoginModal";
-import CartDrawer from "@component/drawer/CartDrawer";
-import { SidebarContext } from "@context/SidebarContext";
-import { lang } from "@utils/data";
+import NavbarPromo from 'src/layout/navbar/NavbarPromo';
+import { UserContext } from '@context/UserContext';
+import LoginModal from '@component/modal/LoginModal';
+import CartDrawer from '@component/drawer/CartDrawer';
+import { SidebarContext } from '@context/SidebarContext';
+import { lang } from '@utils/data';
 
 const Navbar = () => {
-  const [imageUrl, setImageUrl] = useState("");
-  const [searchText, setSearchText] = useState("");
+  const [imageUrl, setImageUrl] = useState('');
+  const [searchText, setSearchText] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const { toggleCartDrawer } = useContext(SidebarContext);
   const { totalItems } = useCart();
@@ -35,16 +35,16 @@ const Navbar = () => {
     e.preventDefault();
     if (searchText) {
       router.push(`/search?query=${searchText}`, null, { scroll: false });
-      setSearchText("");
+      setSearchText('');
     } else {
       router.push(`/ `, null, { scroll: false });
-      setSearchText("");
+      setSearchText('');
     }
   };
 
   useEffect(() => {
-    if (Cookies.get("userInfo")) {
-      const user = JSON.parse(Cookies.get("userInfo"));
+    if (Cookies.get('userInfo')) {
+      const user = JSON.parse(Cookies.get('userInfo'));
       setImageUrl(user.image);
     }
   }, []);
@@ -61,9 +61,9 @@ const Navbar = () => {
           <div className="top-bar h-16 lg:h-auto flex items-center justify-between py-4 mx-auto">
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block text-white">
-                <div className="ml-6 flex">
-                  <FiSend className="text-4xl" />
-                  <h6 className="ml-2 text-3xl">Daraz</h6>
+                <div className='ml-6 flex'>
+                  <FiSend className='text-4xl' />
+                  <h6 className='ml-2 text-3xl'>Daraz</h6>
                 </div>
               </a>
             </Link>
@@ -102,10 +102,7 @@ const Navbar = () => {
                     aria-hidden="true"
                   />
                 </label>
-                <ul
-                  tabindex="0"
-                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-                >
+                <ul tabindex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                   <li>
                     <Link href="/en">
                       <a>English</a>

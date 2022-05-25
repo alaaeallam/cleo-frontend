@@ -1,64 +1,65 @@
 import React from 'react';
 import Image from 'next/image';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from "next-i18next";
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import PageHeader from '@component/header/PageHeader';
 
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['about', 'navbarpromo']))
+    },
+  };
+};
+
 const AboutUs = () => {
+
+  const { t } = useTranslation()
+
   return (
     <Layout title="About Us" description="This is about us page">
-      <PageHeader title="About Us" />
+      <PageHeader title={t('about:about25')} />
 
       <div className="bg-white">
         <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
           <div className="grid grid-flow-row lg:grid-cols-2 gap-4 lg:gap-16 items-center">
             <div className="">
               <h3 className="text-xl lg:text-3xl mb-2 font-serif font-semibold">
-                Welcome to our KachaBazar
+                {t('about:welcome')}
               </h3>
               <div className="mt-3 text-base opacity-90 leading-7">
                 <p>
-                  Holisticly seize parallel metrics and functional ROI.
-                  Seamlessly revolutionize error-free internal or "organic"
-                  sources before effective scenarios. Progressively incentivize
-                  state of the art applications for efficient intellectual
-                  capital. Credibly leverage existing distinctive mindshare
-                  through cutting-edge schemas. Proactively procrastinate team
-                  building paradigms coordinate client-centric total transparent
-                  internal.
+                  {t('about:about1')}
                 </p>
 
                 <p>
-                  Dynamically embrace diverse customer service and installed
-                  base paradigms. Credibly seize enterprise-wide experiences for
-                  end-to-end data. Professionally brand flexible alignments and
-                  cost effective architectures. Enthusiastically incentivize
-                  seamless communities with seamlessly facilitate revolutionary
-                  metrics with strategic theme areas.
+                  {t('about:about2')}
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-2 xl:gap-6 mt-8">
                 <div className="p-8 bg-indigo-50 shadow-sm rounded-lg">
                   <span className="text-3xl block font-extrabold font-serif mb-4 text-gray-800">
-                    10K
+                    {t('about:about3')}
                   </span>
                   <h4 className="text-lg font-serif font-bold mb-1">
-                    Listed Products
+                    {t('about:about4')}
                   </h4>
                   <p className="mb-0 opacity-90 leading-7">
-                    Dynamically morph team driven partnerships after vertical.{' '}
+                    {t('about:about5')}{' '}
                   </p>
                 </div>
                 <div className="p-8 bg-indigo-50 shadow-sm rounded-lg">
                   <span className="text-3xl block font-extrabold font-serif mb-4 text-gray-800">
-                    8K
+                    {t('about:about6')}
                   </span>
                   <h4 className="text-lg font-serif font-bold mb-1">
-                    Lovely Customer
+                    {t('about:about7')}
                   </h4>
                   <p className="mb-0 opacity-90 leading-7">
-                    Competently productize virtual models without performance.{' '}
+                    {t('about:about8')}{' '}
                   </p>
                 </div>
               </div>
@@ -69,36 +70,12 @@ const AboutUs = () => {
           </div>
           <div className="mt-10 lg:mt-16 text-base opacity-90 leading-7">
             <p>
-              Holisticly seize parallel metrics and functional ROI. Seamlessly
-              revolutionize error-free internal or "organic" sources before
-              effective scenarios. Progressively incentivize state of the art
-              applications for efficient intellectual capital. Credibly leverage
-              existing distinctive mindshare through cutting-edge schemas.
-              Proactively procrastinate team building paradigms coordinate
-              client-centric total transparent internal. Energistically
-              reconceptualize global leadership for high-quality networks.
-              Credibly restore an expanded array of systems rather than accurate
-              results. Collaboratively synergize backend bandwidth without 24/7
-              functionalities. Credibly utilize proactive ideas whereas
-              cross-media core competencies. Uniquely maximize professional best
-              practices through resource maximizing services. Conveniently
-              architect cross-unit web services for e-business imperatives.{' '}
+              {t('about:about9')}{' '}
             </p>
 
             <p>
-              {' '}
-              Appropriately visualize market-driven data before one-to-one
-              scenarios. Collaboratively productize multifunctional ROI through
-              intuitive supply chains. Enthusiastically seize revolutionary
-              value and process-centric services. Competently harness intuitive
-              information after interoperable markets. Interactively
-              revolutionize future-proof value before granular sources.
-              Dynamically embrace diverse customer service and installed base
-              paradigms. Credibly seize enterprise-wide experiences for
-              end-to-end data. Professionally brand flexible alignments and cost
-              effective architectures. Enthusiastically incentivize seamless
-              communities with seamlessly facilitate revolutionary metrics with
-              strategic theme areas.
+              {t('about:about10')}{' '}
+
             </p>
           </div>
           <div className="mt-10 lg:mt-12 flex flex-col sm:grid gap-4">
@@ -116,12 +93,10 @@ const AboutUs = () => {
             <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-8">
               <div className="max-w-2xl">
                 <h3 className="text-xl lg:text-3xl mb-2 font-serif font-semibold">
-                  Our Founder
+                  {t('about:about11')}
                 </h3>
                 <p className="mt-2 md:mt-3 font-normal block text-base">
-                  We’re impartial and independent, and every day we create
-                  distinctive, world-class reintermediate backend supply
-                  programmes.
+                  {t('about:about12')}
                 </p>
               </div>
             </div>
@@ -136,10 +111,10 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Niamh Shea
+                    {t('about:about13')}
                   </h5>
                   <span className="opacity-75 text-sm">
-                    Co-founder & Executive
+                    {t('about:about14')}
                   </span>
                 </div>
               </div>
@@ -153,9 +128,9 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Orla Dwyer
+                    {t('about:about15')}
                   </h5>
-                  <span className="opacity-75 text-sm">Chief Executive</span>
+                  <span className="opacity-75 text-sm">{t('about:about16')}</span>
                 </div>
               </div>
               <div className="max-w-sm">
@@ -168,10 +143,10 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Danien James
+                    {t('about:about17')}
                   </h5>
                   <span className="opacity-75 text-sm">
-                    Co-founder, Chairman
+                    {t('about:about18')}
                   </span>
                 </div>
               </div>
@@ -185,10 +160,10 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Dara Frazier
+                    {t('about:about19')}
                   </h5>
                   <span className="opacity-75 text-sm">
-                    Chief Strategy Officer
+                    {t('about:about20')}
                   </span>
                 </div>
               </div>
@@ -202,9 +177,9 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Glenda Arvidson
+                    {t('about:about21')}
                   </h5>
-                  <span className="opacity-75 text-sm">HR Officer</span>
+                  <span className="opacity-75 text-sm">{t('about:about22')}</span>
                 </div>
               </div>
               <div className="max-w-sm">
@@ -217,9 +192,9 @@ const AboutUs = () => {
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Melvin Davis
+                    {t('about:about23')}
                   </h5>
-                  <span className="opacity-75 text-sm">Lead Developer</span>
+                  <span className="opacity-75 text-sm">{t('about:about24')}</span>
                 </div>
               </div>
             </div>

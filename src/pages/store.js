@@ -1,5 +1,5 @@
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import Stores from '@component/store/Stores';
 import PageHeader from '@component/header/PageHeader';
 

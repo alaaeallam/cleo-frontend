@@ -1,5 +1,5 @@
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import Coupon from '@component/coupon/Coupon';
 import PageHeader from '@component/header/PageHeader';
 

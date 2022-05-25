@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 //internal import
-import Layout from '@layout/Layout';
+import Layout from 'src/layout/Layout';
 import useFilter from '@hooks/useFilter';
 import Card from '@component/cta-card/Card';
 import ProductServices from '@services/ProductServices';

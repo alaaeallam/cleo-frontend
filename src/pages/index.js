@@ -1,29 +1,29 @@
-import useSessionstorage from "@rooks/use-sessionstorage";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import useSessionstorage from '@rooks/use-sessionstorage';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from "next-i18next";
 
 //internal import
-import Layout from "src/layout/Layout";
-import Banner from "@component/banner/Banner";
-import CardTwo from "@component/cta-card/CardTwo";
-import OfferCard from "@component/offer/OfferCard";
-import StickyCart from "@component/cart/StickyCart";
-import ProductServices from "@services/ProductServices";
-import ProductCard from "@component/product/ProductCard";
-import CatProdCard from "@component/category/CatProdCard";
-import BrandCard from "@component/brand/BrandCard";
-import MainCarousel from "@component/carousel/MainCarousel";
-import FeatureCategory from "@component/category/FeatureCategory";
-import CategoryServices from "@services/CategoryServices";
-import BrandServices from "@services/BrandServices";
-import useAsync from "@hooks/useAsync";
-import useAsyncs from "@hooks/useAsyncs";
+import Layout from 'src/layout/Layout';
+import Banner from '@component/banner/Banner';
+import CardTwo from '@component/cta-card/CardTwo';
+import OfferCard from '@component/offer/OfferCard';
+import StickyCart from '@component/cart/StickyCart';
+import ProductServices from '@services/ProductServices';
+import ProductCard from '@component/product/ProductCard';
+import CatProdCard from '@component/category/CatProdCard';
+import BrandCard from '@component/brand/BrandCard';
+import MainCarousel from '@component/carousel/MainCarousel';
+import FeatureCategory from '@component/category/FeatureCategory';
+import CategoryServices from '@services/CategoryServices';
+import BrandServices from '@services/BrandServices';
+import useAsync from '@hooks/useAsync';
+import useAsyncs from '@hooks/useAsyncs';
 
 const Home = ({ products, popularProducts, discountProducts }) => {
-  const [value, set] = useSessionstorage("products", products);
+  const [value, set] = useSessionstorage('products', products);
   const { data, error } = useAsync(() => CategoryServices.getShowingCategory());
   const { datas, errors } = useAsyncs(() => BrandServices.getShowingBrand());
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <>
@@ -52,10 +52,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                    {t("home:fc1")}
+                    {t('home:fc1')}
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
-                    {t("home:fc2")}
+                    {t('home:fc2')}
                   </p>
                 </div>
               </div>
@@ -68,10 +68,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                  {t("home:pp1")}
+                  {t('home:pp1')}
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6">
-                  {t("home:pp2")}
+                  {t('home:pp2')}
                 </p>
               </div>
             </div>
@@ -103,10 +103,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                  {t("home:dp1")}
+                  {t('home:dp1')}
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6">
-                  {t("home:dp2")}
+                  {t('home:dp2')}
                 </p>
               </div>
             </div>
@@ -131,10 +131,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                    {t("home:cp1")}
+                    {t('home:cp1')}
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
-                    {t("home:cp2")}
+                    {t('home:cp2')}
                   </p>
                 </div>
               </div>
@@ -160,10 +160,10 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                    {t("home:bp1")}
+                  {t('home:bp1')}
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
-                    {t("home:bp2")}
+                  {t('home:bp2')}
                   </p>
                 </div>
               </div>
@@ -178,6 +178,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
               </div>
             </div>
           )}
+
         </div>
       </Layout>
     </>
@@ -195,12 +196,7 @@ export const getStaticProps = async ({ locale }) => {
       products: products,
       popularProducts: popularProducts.slice(0, 50),
       discountProducts: discountProducts,
-      ...(await serverSideTranslations(locale, [
-        "home",
-        "common",
-        "navbarpromo",
-        "about",
-      ])),
+      ...(await serverSideTranslations(locale, ['home', 'common', 'navbarpromo', 'about']))
     },
     revalidate: 60,
   };
