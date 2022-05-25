@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { ImFacebook, ImGoogle } from "react-icons/im";
+import React, { useState } from 'react';
+import { ImFacebook, ImGoogle } from 'react-icons/im';
 
 //internal import
-import Login from "@component/login/Login";
-import Register from "@component/login/Register";
-import ResetPassword from "@component/login/ResetPassword";
-import useLoginSubmit from "@hooks/useLoginSubmit";
+import Login from '@component/login/Login';
+import Register from '@component/login/Register';
+import ResetPassword from '@component/login/ResetPassword';
+import useLoginSubmit from '@hooks/useLoginSubmit';
 
 const Common = ({ setModalOpen }) => {
   const [showRegister, setShowRegister] = useState(false);
@@ -60,17 +60,17 @@ const Common = ({ setModalOpen }) => {
             )}
             onSuccess={handleGoogleSignIn}
             onFailure={handleGoogleSignIn}
-            cookiePolicy={"single_host_origin"}
+            cookiePolicy={'single_host_origin'}
           />
         </div>
         <div className="text-center text-sm text-gray-900 mt-4">
           <div className="text-gray-500 mt-2.5">
-            {showRegister ? "Already have a account ?" : "Not have a account ?"}
+            {showRegister ? 'Already have a account ?' : 'Not have a account ?'}
             <button
               onClick={handleModal}
               className="text-gray-800 hover:text-emerald-500 font-bold mx-2"
             >
-              {showRegister ? "Login" : "Register"}
+              {showRegister ? 'Login' : 'Register'}
             </button>
           </div>
         </div>
