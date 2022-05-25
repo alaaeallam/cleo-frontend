@@ -20,12 +20,12 @@ const Cart = () => {
     state: { userInfo },
   } = useContext(UserContext);
 
-  // const handleOpenLogin = () => {
-  //   if (router.push("/?redirect=/checkout")) {
-  //     toggleCartDrawer();
-  //     setModalOpen(!modalOpen);
-  //   }
-  // };
+  const handleOpenLogin = () => {
+    if (router.push("/?redirect=/checkout")) {
+      toggleCartDrawer();
+      setModalOpen(!modalOpen);
+    }
+  };
 
   const checkoutClass = (
     <button
@@ -93,9 +93,13 @@ const Cart = () => {
             checkoutClass
           ) : (
             <span>
-              <Link href="/checkout">
-                <a>{checkoutClass}</a>
-              </Link>
+              {!userInfo ? (
+                <div onClick={handleOpenLogin}>{checkoutClass}</div>
+              ) : (
+                <Link href="/checkout">
+                  <a>{checkoutClass}</a>
+                </Link>
+              )}
             </span>
           )}
         </div>
