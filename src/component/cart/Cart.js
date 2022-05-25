@@ -88,21 +88,19 @@ const Cart = () => {
             <CartItem key={i + 1} item={item} />
           ))}
         </div>
-        {/* <div className="mx-5 my-3">
+        <div className="mx-5 my-3">
           {items.length <= 0 ? (
             checkoutClass
           ) : (
             <span>
-              {!userInfo ? (
-                <div onClick={handleOpenLogin}>{checkoutClass}</div>
-              ) : (
-                <Link href="/checkout">
-                  <a>{checkoutClass}</a>
-                </Link>
-              )}
+              (
+              <Link href="/checkout">
+                <a>{checkoutClass}</a>
+              </Link>
+              )
             </span>
           )}
-        </div> */}
+        </div>
       </div>
     </>
   );
