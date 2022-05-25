@@ -93,11 +93,9 @@ const Cart = () => {
             checkoutClass
           ) : (
             <span>
-              (
               <Link href="/checkout">
                 <a>{checkoutClass}</a>
               </Link>
-              )
             </span>
           )}
         </div>
