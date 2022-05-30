@@ -196,7 +196,7 @@ export const getStaticProps = async ({ locale }) => {
       products: products,
       popularProducts: popularProducts.slice(0, 50),
       discountProducts: discountProducts,
-      ...(await serverSideTranslations(locale, ['home', 'common', 'navbarpromo', 'about']))
+      ...(await serverSideTranslations(locale, ['home', 'common', 'about']))
     },
     revalidate: 60,
   };
